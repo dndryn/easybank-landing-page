@@ -1,0 +1,37 @@
+@use '../utilities/variables.scss' as var;
+@use '../utilities/mixins.scss' as mix;
+
+$fnt-wgt-normal: var.$font-weight_thin;
+$fnt-wgt-cta: var.$font-weight_bold;
+
+.button, a {
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+    font-size: var.$font-size_5;
+    &__normal {
+        height: 44px;
+        font-weight: $fnt-wgt-normal;
+        color: var.$neutral_grayish-blue;
+        margin: 0 16px 0 16px;
+        background-color: var.$neutral_very-light-gray;
+    }
+    &__cta {
+        display: flex;
+        justify-content: center;
+        height: 44px - 18px;
+        font-weight: $fnt-wgt-cta;
+        color: var.$neutral_white;
+        // margin: 0 16px 0 16px;
+        background-image: linear-gradient(to right, var.$primary_lime-green, var.$primary_bright-cyan);
+        padding: 9px 32px 9px 32px; // find: calc number to padding up/bottom
+        border-radius: 22px;
+    }
+    &_link {
+        color: var.$neutral_grayish-blue;
+        height: inherit;
+    }
+    &__logo {
+        width:auto;
+    }
+}

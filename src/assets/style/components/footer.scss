@@ -1,0 +1,69 @@
+@use '../utilities/variables.scss' as var;
+
+$footer_color: var.$primary_dark-blue;
+$footer-el_width: var.$page-elements-width;
+
+#app-footer {
+    //TODO: if using '100vh, add '- 191px' to app-main. (470px for mobile)
+    height: 191px;
+    background-color: $footer_color;
+    padding: var.$page-padding-sides;
+}
+
+#footer_sub {
+    height: 95px;
+    width: $footer-el_width;
+    &_a {
+        width: 154px;
+        height: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    &_b {
+        margin-right: 135px; //previuosly 65px;
+        width: 344px;
+        height: inherit;
+    }
+    &_c {
+        flex-direction: column;
+        align-items: end;
+        width: 220px;
+        height: 90px;
+    }
+}
+
+//FIXME: Icons aren't perfectly lined up along the x-axis. 
+//Give the container a size adjustment and then use 'align-items: center' to center them.
+#footer_socials {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 20px;
+}
+#footer_logo {
+    justify-self: start;
+}
+#footer_copyright {
+    color: var.$neutral_grayish-blue;
+    font-size: var.$font-size_5;
+}
+
+.footer_social_link, object {
+    height: 20px;
+}
+
+.ftr_link {
+    color: var.$neutral_light-grayish-blue;
+    align-self: flex-start;
+}
+
+.footer_sub_element {
+    height: 95px;
+}
+
+.footer_sub_b_container {
+    flex-direction: column;
+    height: 82px;
+    width: 154px;
+}

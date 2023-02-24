@@ -1,0 +1,52 @@
+@use '../utilities/variables.scss' as var;
+$overflows : 165px;
+
+#hero {
+    height: 656px;
+    overflow: hidden;
+}
+
+#hero__title {
+    font-size: var.$font-size_1;
+    color: var.$primary_dark-blue;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+#hero_mockup-image {
+    height: inherit;
+    width: 578px;
+    //TODO: to mantein same proportions calculate the percentages of original items 
+    // compared to the same items in position.
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../../../src/assets/svg/bg-intro-desktop.svg');
+        background-repeat: no-repeat;
+        background-position-x: -72px;
+        background-position-y: -260px;
+        background-size: 1271px;
+        width: 578px + $overflows; // - scrollbar width
+        height: inherit;
+        z-index: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../../../src/assets/jpg/image-mockups.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-position-y: -122px;
+        width: 767px;
+        height: 816px;
+        overflow: hidden;
+        right: -180px;
+        z-index: 1;
+    }
+}
+
+#hero_container {
+    height: inherit;
+    overflow: hidden;
+    z-index: 1;
+}

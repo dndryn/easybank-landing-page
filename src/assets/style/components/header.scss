@@ -1,0 +1,21 @@
+@use '../utilities/variables.scss' as var;
+
+$header_color: var.$neutral_white;
+
+#app_header {
+    height: 80px;
+    background-color: $header_color;
+    padding: 0 119.5px; // -> 8.86%
+}
+.app_header {
+    height: 80px;
+    width: 100%;
+    // background-color: var.$neutral_white;
+    background-color: pink;
+}
+
+@media screen and (max-width: 1110px) {
+  #app_header {
+    background-color: aqua;
+  }
+}

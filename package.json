@@ -1,0 +1,17 @@
+{
+  "name": "easybank",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": ["landing page", "frontend mentor"],
+  "author": "dndryn",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "tsc -w",
+    "sass": "sass src/assets/style/main.scss dist/style.css --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
