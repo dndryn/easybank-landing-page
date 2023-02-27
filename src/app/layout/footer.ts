@@ -33,6 +33,7 @@ footer_socials.setAttribute('id', 'footer_socials');
 let arr_socials: HTMLAnchorElement[] = [];
 for (let i = 0; i < 5; i++) {
     let sub_elements = create("a", ["footer_social_link", "is__flex"], create('object', ["is__flex"]));
+    sub_elements.setAttribute("href", "#");
     sub_elements.querySelector("object")?.setAttribute("type", "image/svg+xml");
     sub_elements
       .querySelector("object")
