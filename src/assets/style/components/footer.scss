@@ -53,9 +53,13 @@ $footer-el_width: var.$page-elements-width;
     height: 20px;
 }
 
-.ftr_link {
+.ftr_link { //FIXME: increase selectable area of button-link
     color: var.$neutral_light-grayish-blue;
+    transition: color .5s ease-in-out;
     align-self: flex-start;
+    &:hover {
+        color: var.$primary_lime-green;
+    }
 }
 
 .footer_sub_element {
