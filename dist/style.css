@@ -252,6 +252,9 @@
 .footer_social_link, object {
   height: 20px;
 }
+.footer_social_link object:hover, .footer_social_link object:focus, object object:hover, object object:focus {
+  filter: invert(65%) sepia(61%) saturate(599%) hue-rotate(81deg) brightness(96%) contrast(81%);
+}
 
 .ftr_link {
   color: hsl(220deg, 16%, 96%);
