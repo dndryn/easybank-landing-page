@@ -17,7 +17,6 @@
   height: 26px;
   font-weight: 700;
   color: hsl(0deg, 0%, 100%);
-  background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   padding: 9px 32px 9px 32px;
   border-radius: 22px;
   background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
@@ -157,6 +156,10 @@
   color: hsl(233deg, 26%, 24%);
   margin-block-start: 0px;
   margin-block-end: 0px;
+  transition: color 0.5s ease-in-out;
+}
+.card-article_title:hover {
+  color: hsl(136deg, 65%, 51%);
 }
 .card-article_text {
   font-size: 0.7em;
