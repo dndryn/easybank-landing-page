@@ -20,6 +20,12 @@
   background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   padding: 9px 32px 9px 32px;
   border-radius: 22px;
+  background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  background-color: white;
+  transition: opacity 0.5s ease-in-out;
+}
+.button__cta:hover, a__cta:hover {
+  opacity: 0.5;
 }
 .button_link, a_link {
   color: hsl(233deg, 8%, 62%);

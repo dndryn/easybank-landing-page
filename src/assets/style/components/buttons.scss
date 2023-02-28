@@ -23,9 +23,17 @@ $fnt-wgt-cta: var.$font-weight_bold;
         font-weight: $fnt-wgt-cta;
         color: var.$neutral_white;
         // margin: 0 16px 0 16px;
-        background-image: linear-gradient(to right, var.$primary_lime-green, var.$primary_bright-cyan);
         padding: 9px 32px 9px 32px; // find: calc number to padding up/bottom
         border-radius: 22px;
+        background-image: linear-gradient(
+            to right, 
+            var.$primary_lime-green,
+            var.$primary_bright-cyan);
+        background-color: white;
+        transition: opacity .5s ease-in-out;
+        &:hover {
+            opacity: 0.50;
+        }
     }
     &_link {
         color: var.$neutral_grayish-blue;
