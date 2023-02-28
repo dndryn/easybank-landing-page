@@ -33,6 +33,7 @@ footer_socials.setAttribute('id', 'footer_socials');
 let arr_socials: HTMLAnchorElement[] = [];
 for (let i = 0; i < 5; i++) {
     let sub_elements = create("a", ["footer_social_link", "is__flex"], create('object', ["is__flex"]));
+    sub_elements.setAttribute("href", "#");
     sub_elements.querySelector("object")?.setAttribute("type", "image/svg+xml");
     sub_elements
       .querySelector("object")
@@ -60,6 +61,7 @@ footer_sub_b_2.setAttribute("id", "footer_sub_b_2");
 let arr_links: HTMLAnchorElement[] = [];
 for (let i = 0; i < 7; i++) {
   let sub_elements = create("a", ["ftr_link","is__flex"], `${footer_name_links[i]}`);
+  sub_elements.setAttribute("href", "#");
   arr_links.push(sub_elements);
 }
 const [home, about, contacts, blog, careers, support, privacy] = [...arr_links];

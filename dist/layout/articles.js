@@ -26,7 +26,8 @@ for (let i = 1; i <= cards_number; i++) {
     let article_author = create("span", ["card-article_author", "is_flx"]);
     article_author.setAttribute("id", `article_author_${i}`);
     article_author.innerText = `By ${authors[i - 1]}`;
-    let article_title = create("span", ["card-article_title", "is_flx"]);
+    let article_title = create("a", ["card-article_title", "is_flx"]);
+    article_title.setAttribute("href", "#");
     article_title.setAttribute("id", `article_title_${i}`);
     article_title.innerText = titles[i - 1];
     let card_text = create("span", ["card-article_text", "is_flx"]);

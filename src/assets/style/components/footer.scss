@@ -49,13 +49,23 @@ $footer-el_width: var.$page-elements-width;
     font-size: var.$font-size_5;
 }
 
-.footer_social_link, object {
+.footer_social_link, object { 
     height: 20px;
+    // transition: filter 5s ease-in-out;
+    //FIXME: Refactor this in a way to have a 'button_link_footer' component
+    //       that has a more easily accessible SVG and a computed color exactly corresponding to #31d35c.
+    object:hover, object:focus {
+        filter: invert(65%) sepia(61%) saturate(599%) hue-rotate(81deg) brightness(96%) contrast(81%);
+    }
 }
 
-.ftr_link {
+.ftr_link { //FIXME: increase selectable area of button-link
     color: var.$neutral_light-grayish-blue;
+    transition: color .5s ease-in-out;
     align-self: flex-start;
+    &:hover {
+        color: var.$primary_lime-green;
+    }
 }
 
 .footer_sub_element {

@@ -12,5 +12,6 @@ const [button, link, cta] = [...buttons];
 button.setAttribute('class','button__normal');
 link.setAttribute('class', 'button_link');
 cta.setAttribute('class', 'button__cta is__flex');
+cta.setAttribute('href', "#");
 
 export { button, link, cta };

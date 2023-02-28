@@ -40,7 +40,7 @@ $card-width: 255px;
             line-height: 24px;
         }
     }
-    &-article {
+    &-article { //TODO: Make the entire card selectable and add an animation to the border.
         color: var.$neutral_grayish-blue;
         &_img {
             border-top-left-radius: 6px;
@@ -70,6 +70,10 @@ $card-width: 255px;
             color: var.$primary_dark-blue;
             margin-block-start: 0px;
             margin-block-end: 0px;
+            transition: color .5s ease-in-out;
+            &:hover {
+                color:var.$primary_lime-green;
+            }
         }
         &_text {
             font-size: $text_font-size;
