@@ -6,7 +6,7 @@ This project follows semantic versioning.
 
 - fully responsive version with mobile optimization.
 
-## [0.2.0] - 2022-02-23
+## [0.2.0] - 2022-02-28
 
 Added
 
