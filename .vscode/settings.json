@@ -1,3 +1,9 @@
 {
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "liveServer.settings.host": "localhost",
+    "liveServer.settings.wait": 500,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.NoBrowser": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.root": "/dist",
 }
