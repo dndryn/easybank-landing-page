@@ -1,7 +1,7 @@
 console.log("...hooked on!");
-import { header } from './layout/header.js';
-import { main } from './layout/main.js';
-import { footer } from './layout/footer.js';
+import { header } from '@component/header';
+import { main } from '@component/main';
+import { footer } from '@component/footer';
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const app = document.body;
