@@ -1,7 +1,9 @@
 console.log("...hooked on!");
-import { header } from './layout/header.js';
-import { main } from './layout/main.js';
-import { footer } from './layout/footer.js';
+import './components/card/card.scss'; // TODO: Remove this import when the card component is ready.
+import "./index.scss";
+import { header } from '@component/header';
+import { main } from '@component/main';
+import { footer } from '@component/footer';
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const app = document.body;
@@ -17,6 +19,8 @@ import { footer } from './layout/footer.js';
 const app = document.body;
 app.id = "app";
 app?.append(header, main, footer);
+
+export default app;
 
 
 
