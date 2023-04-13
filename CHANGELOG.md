@@ -20,7 +20,7 @@ This project follows semantic versioning.
 
 - Webpack implementation.
 
-## [0.2.0] - 2022-02-23
+## [0.2.0] - 2022-02-28
 
 ### Added
 
