@@ -3,10 +3,6 @@ node_modules/
 design/
 docs/
 
-# Files
-style.css.map
-tsconfig.json
-
 # VS Code files 
 .vscode/*
 !.vscode/settings.json
@@ -17,3 +13,15 @@ tsconfig.json
 
 # Local History for Visual Studio Code
 .history/
+
+#Visual Studio
+.vs/*
+*.sln
+*.config
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

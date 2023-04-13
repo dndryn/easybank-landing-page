@@ -1,0 +1,18 @@
+@import '../../shared/variables';
+
+#app_header {
+    height: 80px;
+    background-color: $neutral_white;
+    padding: 0 119.5px; // -> 8.86%
+}
+.app_header {
+    height: 80px;
+    width: 100%;
+    background-color: $neutral_white;
+}
+
+@media screen and (max-width: 1110px) {
+  #app_header {
+    background-color: aqua;
+  }
+}

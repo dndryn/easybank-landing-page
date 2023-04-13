@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ES5",
+        "jsx": "react",
+
+        /* Modules */
+        "module": "ES6",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@app_root": [ "./src/app/app.ts" ],
+            "@data/*": [ "./src/data/*.json" ],
+            "@utils/*": [ "./src/app/shared/*.ts" ],
+            "@asset/*": [ "./src/assets/*" ],
+            "@component/*": [
+                "./src/app/components/card/*.ts",
+                "./src/app/components/button/*.ts",
+                "./src/app/components/header/*.ts",
+                "./src/app/components/footer/*.ts",
+                "./src/app/components/articles/*.ts",
+                "./src/app/components/main/*.ts",
+                "./src/app/components/navbar/*.ts",
+                "./src/app/components/services/*.ts",
+                "./src/app/components/title/*.ts",
+                "./src/app/components/hero/*.ts",
+                "./src/app/components/logo/*.ts",
+                "./src/app/components/links/*.ts"
+            ]
+        },
+
+        /* JavaScript Support */
+        "allowJs": true,
+
+        /* Emit */
+        "sourceMap": true,
+        "outDir": "./dist/",
+
+        /* Interop Constraints */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Type Checking */
+        "strict": true,
+        "noImplicitAny": false,
+
+        /* Completeness */
+        "skipLibCheck": true
+    },
+    "ts-node": {
+        "compilerOptions": { "module": "CommonJS" }
+    }
+}
+
