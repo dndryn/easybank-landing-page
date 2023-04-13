@@ -13,7 +13,7 @@ const config = merge < webpack.Configuration > (common, {
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
     },
     plugins: [
         new miniCssExtractPlugin({ filename: "[name].[chunkhash].css" }),
@@ -21,11 +21,6 @@ const config = merge < webpack.Configuration > (common, {
     ],
     module: {
         rules: [
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            },
             {
                 test: /\.(s[ac]ss)$/i,
                 use: [

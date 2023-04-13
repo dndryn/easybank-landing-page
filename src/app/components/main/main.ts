@@ -1,3 +1,4 @@
+import "./main.scss";
 import create from '@utils/create';
 import { hero } from '@component/hero'
 import { services } from '@component/services';

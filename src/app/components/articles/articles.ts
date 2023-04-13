@@ -1,11 +1,17 @@
-import create from "@utils/create";
-import { CARD_IMAGE_PATH as path } from "@utils/paths";
 import "./articles.scss";
+import create from "@utils/create";
+import img_confetti from "@asset/image-confetti.jpg";
+import img_currency from "@asset/image-currency.jpg";
+import img_plane from "@asset/image-plane.jpg";
+import img_restaurant from "@asset/image-restaurant.jpg";
+
+const arr_img: String[] = [img_currency, img_confetti, img_plane, img_restaurant];
 
 const articles_message = create("div", ["is_flx_cl", "has_x_end"], 
 create("h2", ["section_title","is_flx"], "Latest Articles"));
 articles_message.setAttribute("id", "articles_message");
 articles_message?.querySelector("h2")?.setAttribute("id", "articles_title");
+
 
 let arr_cards: HTMLDivElement[] = [];
 let cards_number = 4;
@@ -27,7 +33,7 @@ for (let i = 1; i <= cards_number; i++) {
 
     let card_image = create("img", ["card-article_img"]);
     card_image?.setAttribute("id", `card-article_img${i}`);
-    card_image.src = `${path}image-${card_images[i - 1]}.jpg`;
+    card_image.src = `${arr_img[i - 1]}`;
     card_image.alt = `${
       card_images[i - 1][0].toUpperCase() + card_images[i-1].substring(1)
     }'s image`;

@@ -1,3 +1,4 @@
+import "./header.scss";
 import create from "@utils/create";
 import { logo } from "@component/logo";
 import { nav_links } from "@component/links";

@@ -1,4 +1,9 @@
+import "./services.scss";
 import create from "@utils/create";
+import icon_online from "@asset/icon-online.svg";
+import icon_budgeting from "@asset/icon-budgeting.svg";
+import icon_onboarding from "@asset/icon-onboarding.svg";
+import icon_api from "@asset/icon-api.svg";
 
 const services_title = create("h2", ["section_title","is_flx", "has_x_cntr"], "Why choose EasyBank?");
 services_title.setAttribute("id", "services_title");
@@ -16,7 +21,7 @@ services_message.append(services_title, services_info);
 let arr_cards: HTMLDivElement[] = [];
 let cards_number = 4;
 for (let i = 1; i <= cards_number; i++) {
-    let card_icons = ["online","onboarding","budgeting", "api"];
+    let card_icons: String[] = [icon_online, icon_budgeting, icon_onboarding, icon_api];
     let card_titles = ["Online Banking", "Simple Budgeting", "Fan Onboarding", "Open API"];
     let card_content = [
         "Our modern web and mobile application applications allow you to keep track of your finances wherever you are in the world",
@@ -31,7 +36,7 @@ for (let i = 1; i <= cards_number; i++) {
         ]); 
         icon.setAttribute("id", `card-services_icon_${i}`);
         icon.type = "image/svg+xml";
-        icon.setAttribute("data", `../../src/assets/svg/icon-${card_icons[i - 1]}.svg`);
+        icon.setAttribute("data", `${card_icons[i - 1]}`);
 
         let icon_container = create("div", [
             "card-services_icon_container", 

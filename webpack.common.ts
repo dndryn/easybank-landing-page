@@ -13,7 +13,7 @@ const config: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.([cm]?ts|tsx)$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
             },
@@ -30,6 +30,11 @@ const config: webpack.Configuration = {
     resolve:
     {
         extensions: ['.tsx', '.ts', '.js'],
+        extensionAlias: {
+            ".js": [".js", ".ts"],
+            ".cjs": [".cjs", ".cts"],
+            ".mjs": [".mjs", ".mts"]
+        },
         plugins: [new TsconfigPathsPlugin({ configFile: "./tsconfig.json" })]
     }
 };

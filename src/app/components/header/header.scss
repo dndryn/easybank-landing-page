@@ -2,14 +2,13 @@
 
 #app_header {
     height: 80px;
-    background-color: $neutral_light-grayish-blue;
+    background-color: $neutral_white;
     padding: 0 119.5px; // -> 8.86%
 }
 .app_header {
     height: 80px;
     width: 100%;
-    // background-color: var.$neutral_white;
-    background-color: pink;
+    background-color: $neutral_white;
 }
 
 @media screen and (max-width: 1110px) {

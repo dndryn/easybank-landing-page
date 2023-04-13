@@ -1,8 +1,13 @@
+import './footer.scss';
 import create from "@utils/create";
-import { socials as social_paths } from "@utils/paths";
 import { logo } from "@component/logo";
 import { cta } from "@component/button";
-import './footer.scss';
+import logo_svg from "@asset/logo_dark.svg";
+import icon_facebook from "@asset/icon-facebook.svg";
+import icon_youtube from "@asset/icon-youtube.svg";
+import icon_twitter from "@asset/icon-twitter.svg";
+import icon_pinterest from "@asset/icon-pinterest.svg";
+import icon_instagram from "@asset/icon-instagram.svg";
 
 const footer = create("footer", ["is__flex"]);
 footer.id = `app-footer`;
@@ -26,19 +31,20 @@ footer_sub_c.setAttribute("id", "footer_sub_c");
 const footer_logo = logo.cloneNode(true) as HTMLAnchorElement;
 footer_logo.setAttribute("id", "footer_logo");
 footer_logo
-  .querySelector("object")
-  ?.setAttribute("data", "../../src/assets/svg/logo_dark.svg");
+    .querySelector("object")
+    ?.setAttribute("data", `${logo_svg}`);
 
 const footer_socials = create('div', ['is__flex', 'on__sides']);
 footer_socials.setAttribute('id', 'footer_socials');
 let arr_socials: HTMLAnchorElement[] = [];
+const svg_socials: String[] = [icon_facebook, icon_youtube, icon_twitter, icon_pinterest, icon_instagram];
 for (let i = 0; i < 5; i++) {
     let sub_elements = create("a", ["footer_social_link", "is__flex"], create('object', ["is__flex"]));
     sub_elements.setAttribute("href", "#");
     sub_elements.querySelector("object")?.setAttribute("type", "image/svg+xml");
     sub_elements
       .querySelector("object")
-      ?.setAttribute("data", `../../src/assets/svg/${social_paths[i]}`);
+      ?.setAttribute("data", `${svg_socials[i]}`);
     //   ?.setAttribute("data", `./app/layout/icon-instagram.svg`);
     arr_socials.push(sub_elements);
 }

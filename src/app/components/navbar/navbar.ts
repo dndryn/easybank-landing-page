@@ -1,7 +1,8 @@
- import create from "@utils/create";
- import { nav_links } from "@component/links";
- import { logo } from "@component/logo";
- import { cta } from "@component/button";
+import "./nav.scss";
+//import create from "@utils/create";
+//import { nav_links } from "@component/links";
+//import { logo } from "@component/logo";
+//import { cta } from "@component/button";
 
 // const nav__cta = cta;
 // nav__cta.setAttribute('id', 'nav__cta');

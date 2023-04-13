@@ -4,7 +4,7 @@ $fnt-wgt-normal: $font-weight_thin;
 $fnt-wgt-cta: $font-weight_bold;
 
 .button, a {
-    display: inline-block;
+    /*display: inline-block;*/
     text-decoration: none;
     width: auto;
     font-size: $font-size_5;

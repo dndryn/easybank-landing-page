@@ -1,0 +1,25 @@
+@import '../../shared/variables';
+
+#app_nav {
+    width: 1110px;
+    height: auto;
+    min-width: calc(100% - (165px * 2));
+    background-color: $neutral_white;
+}
+
+#nav_links {
+    margin-left: 27px; // optional
+    width: 330px;
+    padding-inline-start: 0px;
+    height: 80px;
+}
+
+#nav__logo {
+    height: 100%;
+}
+
+.nav {
+    &_link {
+        list-style-type: none;
+    }
+}
