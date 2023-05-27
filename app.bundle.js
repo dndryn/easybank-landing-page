@@ -40,6 +40,8 @@
 var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./src/app/shared/create.ts
+// FIXME: When classes gets an empty string trow an error
+// TODO: Implement overloads to allow choosing between a 'content' element or an array of 'content'.
 function create(tag, classes, content) {
     var _a;
     var element = document.createElement("".concat(tag));
@@ -56,6 +58,9 @@ function create(tag, classes, content) {
     ;
     return element;
 }
+// Previusly:
+// (content instanceof HTMLElement) ? element.innerHTML = content.outerHTML: element.innerText = `${content}`;
+// (content instanceof HTMLElement) ? element.append(content) : element.innerText = `${content}`;
 
 ;// CONCATENATED MODULE: ./src/app/components/button/button.ts
 var __spreadArray = (undefined && undefined.__spreadArray) || function (to, from, pack) {
@@ -121,17 +126,34 @@ var links_spreadArray = (undefined && undefined.__spreadArray) || function (to, 
 
 var nav_links = create("nav", ["is_flx_rw", "has_x_spcd", "has_y_cntr"]);
 nav_links.id = "nav_links";
+// Provides n link button to nav_links
 var arr = [];
+// let names = ["home", "about", "contacts", "blog", "careers"];
 var names = link_names;
 var links_number = 5;
+//TODO: Handle 'links' margin to add padding in both sides properly.
+//TODO: Ad ogni elemento 'LI' innestarne uno 'A' (button)
+//BUG: If using an imported button it show itself only on the last element of arr: 
+// prova creando una variabile btn e assgna il button
 for (var links_i = 0; links_i < links_number; links_i++) {
     var links_element = create("a", ["button", "button_link", "nav_link", "is_flx", "has_x_cntr", "has_y_cntr"], "".concat(names[links_i][0].toUpperCase() + names[links_i].substring(1)));
     links_element.setAttribute("id", "link-to_".concat(names[links_i]));
     links_element.setAttribute("href", "#");
-    arr[links_i] = links_element;
+    arr[links_i] = links_element; // alt: arr.push(element);
 }
+//TESTING: links object
+//TODO: implement an iterator generator for 'links
+// let links: Record<string, HTMLLIElement> = {};
+// let names = ["home", "about", "contacts", "blog", "careers"];
+// for (let i = 0; i < names.length; i++) {links[names[i]] = arr[i];}
+// const [home, about, contacts, blog, careers] = [...Object.values(links)];
+// for (let link of links) {links[link].id = `link__${link}`}
 var links_a = links_spreadArray([], arr, true), home = links_a[0], about = links_a[1], contacts = links_a[2], blog = links_a[3], careers = links_a[4];
 nav_links.append(home, about, contacts, blog, careers);
+//TODO: dynamically assign each string to its corresponding id. For example:
+//  for (let element in arr) {
+//      element.id = `link__${element}`
+//     }
 
 
 ;// CONCATENATED MODULE: ./src/app/components/header/header.ts
@@ -155,6 +177,7 @@ header.append(nav__logo, nav_links, nav__cta);
 
 
 
+//import svgImage from '@asset/bg-intro-desktop.svg';
 var hero_title = create("h1", ["is__flex"]);
 hero_title.setAttribute("id", "hero_title");
 hero_title.innerText = "Next generation digital banking";
@@ -170,6 +193,7 @@ hero_message.setAttribute("id", "hero_message");
 hero_message.append(hero_title, hero_description, hero_cta);
 var hero_mockup_image = create("div", ["is_flx"]);
 hero_mockup_image.setAttribute("id", "hero_mockup-image");
+//hero_mockup_image.style.backgroundImage = `url(${svgImage})`;
 var hero_container = create("div", ["is__flex", "on__sides"]);
 hero_container.setAttribute("id", "hero_container");
 hero_container.append(hero_message, hero_mockup_image);
@@ -209,6 +233,8 @@ services_info.innerText = "We leverage Open Banking to turn your bank account in
 var services_message = create("div", ["is__flex"]);
 services_message.setAttribute("id", "services_message");
 services_message.append(services_title, services_info);
+// const services_card_container = create("div", ["is__flex"]);
+// services_card_container.setAttribute("id", "services_card_container");
 var arr_cards = [];
 var cards_number = 4;
 for (var services_i = 1; services_i <= cards_number; services_i++) {
@@ -239,6 +265,8 @@ for (var services_i = 1; services_i <= cards_number; services_i++) {
     var info = create("span", ["card-services_info", "is_flx_cl", "has_x_end"]);
     info.setAttribute("id", "card-services_info_".concat(services_i));
     info.innerText = card_content[services_i - 1];
+    //FIXME:is__flex must be on first instead of card-services for specificity. 
+    //Change this by adopting more specific flex classes.
     var services_element = create("div", ["card", "card-services", "is_flx_cl", "has_x_strt"]);
     services_element.setAttribute("id", "services_card_".concat(services_i));
     services_element.append(icon_container, title, info);
@@ -385,6 +413,7 @@ var footer = create("footer", ["is__flex"]);
 footer.id = "app-footer";
 var footer_sub = create('div', ["is__flex", "on__sides"]);
 footer_sub.setAttribute('id', 'footer_sub');
+//TODO: Convert in a function: spread() or diffuse(n, 'div' || HTMLElement, ["class1", "class2"]);
 var sub_footr = [];
 for (var footer_i = 0; footer_i < 3; footer_i++) {
     var sub_elements = create("div", ["footer_sub_element", "is__flex", "on__sides"]);
@@ -394,6 +423,8 @@ var footer_d = footer_spreadArray([], sub_footr, true), footer_sub_a = footer_d[
 footer_sub_a.setAttribute("id", "footer_sub_a");
 footer_sub_b.setAttribute("id", "footer_sub_b");
 footer_sub_c.setAttribute("id", "footer_sub_c");
+//FIXME: The following works 'cause there's a clone node. 
+//TODO: Implement a class with custom component for logo button link ( logo )
 var footer_logo = logo__container.cloneNode(true);
 footer_logo.setAttribute("id", "footer_logo");
 (footer_a = footer_logo
@@ -408,6 +439,7 @@ for (var footer_i = 0; footer_i < 5; footer_i++) {
     (footer_b = sub_elements.querySelector("object")) === null || footer_b === void 0 ? void 0 : footer_b.setAttribute("type", "image/svg+xml");
     (footer_c = sub_elements
         .querySelector("object")) === null || footer_c === void 0 ? void 0 : footer_c.setAttribute("data", "".concat(svg_socials[footer_i]));
+    //   ?.setAttribute("data", `./app/layout/icon-instagram.svg`);
     arr_socials.push(sub_elements);
 }
 var _e = footer_spreadArray([], arr_socials, true), facebook = _e[0], youtube = _e[1], twitter = _e[2], pinterest = _e[3], instagram = _e[4];
@@ -448,11 +480,18 @@ footer.appendChild(footer_sub);
 
 ;// CONCATENATED MODULE: ./src/app/app.ts
 console.log("...hooked on!");
+ // TODO: Remove this import when the card component is ready.
 
 
 
 
-
+// document.addEventListener("DOMContentLoaded", function() {
+//     const app = document.body;
+//     app.id = "app";
+//     app?.append(header, main, footer);
+// });
+// TODO: Write an error handler that injects the message "app requires JavaScript to be enabled" 
+// in case the browser has disabled Javascript.
 var app = document.body;
 app.id = "app";
 app === null || app === void 0 ? void 0 : app.append(header, main, footer);
