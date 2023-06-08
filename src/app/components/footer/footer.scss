@@ -1,35 +1,95 @@
 @import '../../shared/variables';
+@import '../../shared/media-queries';
 
 $footer_color: $primary_dark-blue;
 $footer-el_width: $page-elements-width;
 
-#app-footer {
-    //TODO: if using '100vh, add '- 191px' to app-main. (470px for mobile)
+#app-footer { //TODO: if using '100vh, add '- 191px' to app-main. (470px for mobile)
     height: 191px;
     background-color: $footer_color;
-    padding: $page-padding-sides;
+    width: auto;
+    @include on-desktop {
+        padding: $page-padding-sides; 
+    }
+    @include on-tablet {
+        padding: 0 96px;
+        height: 235px;
+    }
+    @include on-mobile {
+        padding: 0 0;
+        height: 470px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+#footer_cta {
+    width: 98.547px;
 }
 
 #footer_sub {
     height: 95px;
-    width: $footer-el_width;
+    width: 100%;
+    @include on-mobile {
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: auto;
+    }
+    @include on-tablet {
+        height: 75%;
+    }
+
     &_a {
         width: 154px;
         height: inherit;
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
+        @include on-mobile {
+            height: 74px;
+            align-items: center;
+        }
     }
+
     &_b {
-        margin-right: 135px; //previuosly 65px;
-        width: 344px;
-        height: inherit;
+        height: 95px;
+        min-width: 288px;
+        max-width: 418px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 8px 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        column-count: 2;
+        margin-left: 130px;
+        margin-right: auto;
+        transition: all 0.6s ease-in-out; 
+        @include on-mobile {
+            height: 175px;
+            margin: unset;
+            min-width: none;
+            max-width: none;
+            width: inherit;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include on-tablet {
+            margin: unset;
+        }
     }
+
     &_c {
         flex-direction: column;
         align-items: end;
-        width: 220px;
+        min-width: 220px;
         height: 90px;
+        @include on-mobile {
+            align-items: center;
+        }
     }
 }
 
@@ -40,6 +100,7 @@ $footer-el_width: $page-elements-width;
     flex-direction: row;
     width: inherit;
     height: 20px;
+    align-items: center;
 }
 #footer_logo {
     justify-self: start;
@@ -51,7 +112,6 @@ $footer-el_width: $page-elements-width;
 
 .footer_social_link, object { 
     height: 20px;
-    // transition: filter 5s ease-in-out;
     //FIXME: Refactor this in a way to have a 'button_link_footer' component
     //       that has a more easily accessible SVG and a computed color exactly corresponding to #31d35c.
     object:hover, object:focus {
@@ -66,14 +126,16 @@ $footer-el_width: $page-elements-width;
     &:hover {
         color: $primary_lime-green;
     }
-}
-
-.footer_sub_element {
-    height: 95px;
+    @include on-tablet {
+        align-self: center;
+    }
+    @include on-mobile {
+        align-self: center;
+    }
 }
 
 .footer_sub_b_container {
     flex-direction: column;
     height: 82px;
-    width: 154px;
+    width: 154px; 
 }

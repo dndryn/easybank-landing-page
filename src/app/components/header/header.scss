@@ -1,18 +1,16 @@
 @import '../../shared/variables';
+@import '../../shared/media-queries.scss';
 
 #app_header {
     height: 80px;
     background-color: $neutral_white;
     padding: 0 119.5px; // -> 8.86%
+
+    @include on-mobile {
+      padding: 0 24px;
+    }
 }
 .app_header {
     height: 80px;
-    width: 100%;
     background-color: $neutral_white;
-}
-
-@media screen and (max-width: 1110px) {
-  #app_header {
-    background-color: aqua;
-  }
 }
