@@ -2,16 +2,19 @@
 
 #articles {
     width: 100%;
-    height: 659px;
+    min-height: 579px; // -80
     &_container {
         flex-direction: column;
-        width: 1110px;
-        height: inherit;
+        width: 100%;
+        padding: 0 119.5px;
+        padding-bottom: 80px;
     }
     &_cards {
         width: inherit;
-        height: 400px;
         padding-top: 49px;
+        flex-wrap: wrap;
+        gap: 28px;
+        min-height: 400px;
     }
     &_message {
         height: 135px;
@@ -20,9 +23,6 @@
     &_title {
         height: auto;
         width: auto;
-        // color: var.$primary_dark-blue;
-        // font-size: var.$font-size_2;
-        // font-weight: var.$font-weight_thin;
     }
 }
 

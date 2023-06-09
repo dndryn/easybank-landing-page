@@ -1,10 +1,16 @@
 @import '../../shared/variables';
+@import '../../shared/media-queries';
 
 $overflows : 165px;
+$bg-intro-desk: url('../../../assets/bg-intro-desktop.svg');
+$bg-intro-mobile: url('../../../assets/bg-intro-mobile.svg');
 
 #hero {
     height: 656px;
     overflow: hidden;
+    @include on-mobile {
+        height: calc(100vh - 80px);
+    }
 }
 
 #hero__title {
@@ -17,12 +23,16 @@ $overflows : 165px;
 #hero_mockup-image {
     height: inherit;
     width: 578px;
-    //TODO: to mantein same proportions calculate the percentages of original items 
-    // compared to the same items in position.
+    //TODO: to maintain same proportions calculate the percentages of original items 
+    //      compared to the same items in position.
+    @include on-mobile {
+        top: 0px;
+        height: 400px;
+    }
     &::before {
         content: "";
         position: absolute;
-        background-image: url('../../../assets/bg-intro-desktop.svg');
+        background-image: $bg-intro-desk;
         background-repeat: no-repeat;
         background-position-x: -72px;
         background-position-y: -260px;
@@ -30,6 +40,15 @@ $overflows : 165px;
         width: 578px + $overflows; // - scrollbar width
         height: inherit;
         z-index: 0;
+        @include on-mobile {
+            background-image: $bg-intro-mobile;
+            background-size: cover;
+            width: 375px;
+            height: 422px;
+            left: 0px;
+            background-position-x: 0px;
+            background-position-y: -70px;
+        }
     }
     &::after {
         content: "";
@@ -43,6 +62,21 @@ $overflows : 165px;
         overflow: hidden;
         right: -180px;
         z-index: 1;
+
+        @include on-mobile {
+            content: "";
+            position: absolute;
+            background-image: url('../../../assets/image-mockups.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-position-y: -132px;
+            width: 375px;
+            height: 422px;
+            overflow: hidden;
+            right: 0;
+            z-index: 1;
+        }
     }
 }
 

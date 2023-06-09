@@ -14,7 +14,6 @@ $font-weight_mid: 400;
 $font-weight_bold: 700;
 
 // Font's size:
-
 $font-size_1: 3em;    // 54px    --  54px
 $font-size_2: 2em;    // 36px    --  38px
 $font-size_3: 1.2em;  // 21.6px  --  22px
@@ -28,3 +27,8 @@ $font-family_main: 'Public Sans', sans-serif;
 $page-elements-width: 1110px;
 $page-padding-sides: 0 119.5px; // -> 8.86%
 
+// Media screens
+$width-mobile: ( min: 320px, max: 480px );
+$width-tablet: ( min: 768px, max: 1023px );
+$width-desktop: ( min: 1024px, max: 1440px );
+$width-ultrawide: ( min: 1441px );

@@ -33,7 +33,6 @@ footer_logo.setAttribute("id", "footer_logo");
 footer_logo
     .querySelector("object")
     ?.setAttribute("data", `${logo_svg}`);
-
 const footer_socials = create('div', ['is__flex', 'on__sides']);
 footer_socials.setAttribute('id', 'footer_socials');
 let arr_socials: HTMLAnchorElement[] = [];
@@ -45,13 +44,10 @@ for (let i = 0; i < 5; i++) {
     sub_elements
       .querySelector("object")
       ?.setAttribute("data", `${svg_socials[i]}`);
-    //   ?.setAttribute("data", `./app/layout/icon-instagram.svg`);
     arr_socials.push(sub_elements);
 }
 const [facebook, youtube, twitter, pinterest, instagram] = [...arr_socials];
 footer_socials.append(facebook, youtube, twitter, pinterest, instagram);
-
-
 const footer_name_links = [
   "Home",
   "About Us",
@@ -72,20 +68,15 @@ for (let i = 0; i < 7; i++) {
   arr_links.push(sub_elements);
 }
 const [home, about, contacts, blog, careers, support, privacy] = [...arr_links];
-footer_sub_b_1.append(about, contacts, blog);
-footer_sub_b_2.append(careers, support, privacy);
-footer_sub_b.append(footer_sub_b_1, footer_sub_b_2);
 
+footer_sub_b.append(about, contacts, blog, careers, support, privacy);
 
 const footer_cta = cta.cloneNode(true) as HTMLAnchorElement;
 footer_cta.setAttribute("id", "footer_cta");
 const footer_copyright = create("span");
 footer_copyright.setAttribute("id", "footer_copyright");
 footer_copyright.innerText = "© Easybank. All Rights Reserved";
-
 footer_sub_c.append(footer_cta, footer_copyright);
-
-
 footer_sub_a.append(footer_logo, footer_socials);
 footer_sub.append(footer_sub_a, footer_sub_b, footer_sub_c);
 footer.appendChild(footer_sub);
