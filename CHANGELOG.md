@@ -2,9 +2,11 @@
 
 This project follows semantic versioning.
 
-## [Unreleased]
+## [0.4.0] - 2022-06-10
 
-- fully responsive version with mobile optimization.
+### Added
+
+- Fully responsive version with mobile optimization.
 
 ## [0.3.1] - 2022-04-13
 
