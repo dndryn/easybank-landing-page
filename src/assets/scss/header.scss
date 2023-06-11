@@ -1,0 +1,16 @@
+@import './common/variables';
+@import './common/media-queries';
+
+#app_header {
+    height: 80px;
+    background-color: $neutral_white;
+    padding: 0 119.5px; // -> 8.86%
+
+    @include on-mobile {
+      padding: 0 24px;
+    }
+}
+.app_header {
+    height: 80px;
+    background-color: $neutral_white;
+}

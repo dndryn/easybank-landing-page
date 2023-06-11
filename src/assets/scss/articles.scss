@@ -1,0 +1,28 @@
+@import './common/variables';
+
+#articles {
+    width: 100%;
+    min-height: 579px; // -80
+    &_container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 119.5px;
+        padding-bottom: 80px;
+    }
+    &_cards {
+        width: inherit;
+        padding-top: 49px;
+        flex-wrap: wrap;
+        gap: 28px;
+        min-height: 400px;
+    }
+    &_message {
+        height: 135px;
+        width: inherit;
+    }
+    &_title {
+        height: auto;
+        width: auto;
+    }
+}
+

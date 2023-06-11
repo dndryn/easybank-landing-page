@@ -1,0 +1,65 @@
+@import './common/variables';
+@import './common/media-queries';
+
+#services {
+    width: 100%;
+    background-color: $neutral_light-grayish-blue;
+    min-height: 676px; // -80
+    @include on-mobile {
+        padding-bottom: 1rem;
+    }
+    &_message {
+        max-width: 640px; 
+        height: 238px;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+        align-self: start;
+        @include on-mobile {
+            height: 158px;
+            justify-content: space-between;
+            margin: 3rem 0;
+            > h2 {
+                text-align: center;
+                font-size: $font-size_2;
+            }
+            > span {
+                font-size: $font-size_5
+            }
+        }
+    }
+    &_title {
+        color: $primary_dark-blue;
+        font-size: $font-size_2;
+        font-weight: $font-weight_thin;
+    }
+    &_info {
+        align-items: end;
+        color: $neutral_grayish-blue;
+        line-height: 28px;
+        height: 84px;
+        @include on-mobile {
+            text-align: center;
+            line-height: 20px;
+            width: 302px;
+            height: auto;
+        }
+    }
+    &_container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: inherit;
+        width: 100%;
+        padding: 0 119.5px;
+    }
+    &_cards {
+        width: inherit;
+        flex-wrap: wrap;
+        gap: 28px; // column-gap: 28px
+        min-height: 400px;
+        @include on-mobile {
+            gap: 0;
+            justify-content: center;
+        }
+    }
+}
