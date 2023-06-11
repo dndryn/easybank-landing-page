@@ -1,6 +1,6 @@
-import './hero.scss';
 import create from "@utils/create";
 import { cta } from "@component/button";
+import '@style/hero';
 
 const hero_title = create("h1", ["is__flex"]);
 hero_title.setAttribute("id", "hero_title");

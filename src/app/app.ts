@@ -1,9 +1,8 @@
 console.log("...hooked on!");
-import './components/card/card.scss'; // TODO: Remove this import when the card component is ready.
-import "./index.scss";
 import { header } from '@component/header';
 import { main } from '@component/main';
 import { footer } from '@component/footer';
+import '@style/index';
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const app = document.body;

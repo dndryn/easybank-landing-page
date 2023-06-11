@@ -1,9 +1,10 @@
-import "./services.scss";
 import create from "@utils/create";
 import icon_online from "@asset/icon-online.svg";
 import icon_budgeting from "@asset/icon-budgeting.svg";
 import icon_onboarding from "@asset/icon-onboarding.svg";
 import icon_api from "@asset/icon-api.svg";
+import '@style/card';
+import '@style/services';
 
 const services_title = create("h2", ["section_title","is_flx", "has_x_cntr"], "Why choose EasyBank?");
 services_title.setAttribute("id", "services_title");

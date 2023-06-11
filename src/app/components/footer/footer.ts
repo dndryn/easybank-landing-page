@@ -1,4 +1,3 @@
-import './footer.scss';
 import create from "@utils/create";
 import { logo } from "@component/logo";
 import { cta } from "@component/button";
@@ -8,6 +7,7 @@ import icon_youtube from "@asset/icon-youtube.svg";
 import icon_twitter from "@asset/icon-twitter.svg";
 import icon_pinterest from "@asset/icon-pinterest.svg";
 import icon_instagram from "@asset/icon-instagram.svg";
+import '@style/footer';
 
 const footer = create("footer", ["is__flex"]);
 footer.id = `app-footer`;

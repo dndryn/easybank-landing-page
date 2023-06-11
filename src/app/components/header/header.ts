@@ -1,7 +1,7 @@
-import "./header.scss";
 import create from "@utils/create";
 import { logo } from "@component/logo";
 import { cta } from "@component/button";
+import '@style/header';
 
 const nav__cta = cta;
 nav__cta.setAttribute("id", "nav__cta");

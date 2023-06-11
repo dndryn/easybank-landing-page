@@ -1,6 +1,6 @@
 import create from "@utils/create";
 import { link_names } from "@utils/paths";
-import "./nav.scss";
+import '@style/nav';
 
 const nav_links = create("nav", ["is_flx_rw", "has_x_spcd", "has_y_cntr"]);
 nav_links.id = "nav_links";

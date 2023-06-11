@@ -1,5 +1,5 @@
 import create from '@utils/create';
-import './button.scss';
+import '@style/button';
 
 let buttons: HTMLAnchorElement[] = [];
 
@@ -16,3 +16,4 @@ cta.setAttribute('class', 'button__cta is__flex');
 cta.setAttribute('href', "#");
 
 export { button, link, cta };
+

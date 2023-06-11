@@ -1,9 +1,10 @@
-import "./articles.scss";
 import create from "@utils/create";
 import img_confetti from "@asset/image-confetti.jpg";
 import img_currency from "@asset/image-currency.jpg";
 import img_plane from "@asset/image-plane.jpg";
 import img_restaurant from "@asset/image-restaurant.jpg";
+import '@style/articles';
+
 
 const arr_img: String[] = [img_currency, img_confetti, img_plane, img_restaurant];
 

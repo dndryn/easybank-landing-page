@@ -1,5 +1,5 @@
-import './menu.scss';
 import { main, overlay, menu } from '@component/main';
+import '@style/menu';
 
 const toggle: HTMLAnchorElement = (() => {
     let active: boolean = false;

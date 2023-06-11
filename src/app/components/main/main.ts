@@ -1,9 +1,9 @@
-import "./main.scss";
 import create from '@utils/create';
 import { hero } from '@component/hero'
 import { services } from '@component/services';
 import { articles } from '@component/articles';
 import { nav_links } from "@component/links";
+import '@style/main';
 
 const menu: HTMLElement = (() => {
     const element = create('div', ["is__flex", "menu--hidden"], nav_links);
