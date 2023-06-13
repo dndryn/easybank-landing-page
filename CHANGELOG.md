@@ -2,6 +2,13 @@
 
 This project follows semantic versioning.
 
+
+## [0.4.1] - 2022-06-13
+
+### Minor update
+
+- Restructured scss files layout
+
 ## [0.4.0] - 2022-06-10
 
 ### Added

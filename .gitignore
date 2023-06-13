@@ -2,6 +2,7 @@
 node_modules/
 design/
 docs/
+dist/*
 
 # VS Code files 
 .vscode/*
